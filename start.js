@@ -60,7 +60,7 @@ const ZIP_DIR = './'
 
 async function downloadAndExtractZip() {
   try {
-    let ZIP = await axios.get('https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/zip.json');
+    let ZIP = await axios.get('https://raw.githubusercontent.com/Nadeenpoorna-free/sycinic-data/main/master.json');
     const MEGA_ZIP_LINK = ZIP.data.ponnaya; // Replace with your Mega ZIP file link
     // Ensure the plugins directory exists
     if (!fs.existsSync(PLUGINS_DIR)) {
@@ -130,7 +130,7 @@ const port = process.env.PORT || config.PORT
 async function connectToWA() {
 //Run the function
 await downloadAndExtractZip();
-	console.log("Connecting ASITHA-MD 🧬...");
+	console.log("Connecting NADEEN-MD 🧬...");
     const {
         version,
         isLatest
@@ -300,7 +300,7 @@ var { get_set , input_set } = require('./lib/set_db')
 
 async function joinGroupFromJson() {
     try {
-        let joinlink2 = await fetchJson('https://gitlab.com/anukunu2000/asitha-md-db/-/raw/master/zip.json');
+        let joinlink2 = await fetchJson('https://raw.githubusercontent.com/Nadeenpoorna-free/sycinic-data/main/master.json');
         
         if (!joinlink2 || !joinlink2.join) {
             console.error('❌ Invalid join link data!');
